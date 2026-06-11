@@ -3,7 +3,8 @@ C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Api\ApiE
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Api\ApiResponse.java
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Config\ConfigSecurity.java
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Controller\AccountController.java
-C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Controller\UserController.java
+C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Controller\CustomerController.java
+C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\Controller\EmployeeController.java
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\DTO\AccountDTO.java
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\DTO\CustomerDTO.java
 C:\Users\niceb\IdeaProjects\Project3\src\main\java\org\example\project3\DTO\EmployeeDTO.java

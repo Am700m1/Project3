@@ -23,8 +23,11 @@ public class ConfigSecurity {
                 )
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/register").permitAll()
-                        .requestMatchers("/api/v1/auth/register/employee").permitAll()
+                        .requestMatchers("/api/v1/customer/register").permitAll()
+                        .requestMatchers("/api/v1/employee/register").permitAll()
+                        .requestMatchers("/api/v1/customer/get", "/api/v1/customer/update", "/api/v1/customer/delete").hasAuthority("CUSTOMER")
+                        .requestMatchers("/api/v1/employee/get", "/api/v1/employee/update", "/api/v1/employee/delete").hasAnyAuthority("EMPLOYEE", "ADMIN")
+                        .requestMatchers("/api/v1/customer/get-all", "/api/v1/employee/get-all").hasAnyAuthority("EMPLOYEE", "ADMIN")
                         .requestMatchers("/api/v1/account/create", "/api/v1/account/details/{accountId}", "/api/v1/account/my-accounts", "/api/v1/account/deposit/{accountId}/{amount}", "/api/v1/account/withdraw/{accountId}/{amount}", "/api/v1/account/transfer/{fromAccountId}/{toAccountId}/{amount}").hasAuthority("CUSTOMER")
                         .requestMatchers("/api/v1/account/get-all", "/api/v1/account/update/{accountId}", "/api/v1/account/delete/{accountId}", "/api/v1/account/active/{accountId}", "/api/v1/account/block/{accountId}").hasAnyAuthority("EMPLOYEE", "ADMIN")
                         .anyRequest().authenticated()
